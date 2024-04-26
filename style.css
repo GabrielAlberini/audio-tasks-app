@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: start;
+  padding: 40px 0;
+  justify-content: center;
+  background-color: #f0f0f0; /* Cambiado el color de fondo */
+}
+
+.container {
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 42px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background: #303f9f;
+  outline: none;
+}
+
+.record i {
+  font-size: 24px;
+}
+
+.tasks {
+  list-style: none;
+}
+
+.tasks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.tasks li:last-child {
+  border-bottom: none;
+}
+
+.tasks li label {
+  margin-right: auto;
+}
+
+.tasks li .bx-trash {
+  cursor: pointer;
+}
+
+/* Boton de borrar tarea */
+.delete-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  background: #a12a2a;
+  transition: 0.4s opacity;
+}
+
+.delete-task:hover {
+  opacity: 0.8;
+}
+
+/* Animacion grabando */
+.recording {
+  animation: record 0.5s linear alternate infinite;
+}
+
+@keyframes record {
+  to {
+    background: #303f9f;
+  }
+  from {
+    background: #0c1552;
+  }
+}
